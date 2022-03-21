@@ -4,7 +4,7 @@ A simple MediaRecorder demo using webm-duration-fix;
 
 ## Example
 
-[https://mediaRecorder-demo.vercel.app/](https://mediaRecorder-demo.vercel.app/)
+[https://media-recorder-demo.vercel.app/](https://media-recorder-demo.vercel.app/)
 
 ## Run
 
