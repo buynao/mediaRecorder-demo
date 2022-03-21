@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  width: 1000px;
+  margin: 30px auto 0;
+  overflow: hidden;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.button {
+  width: 100px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+  background: #f70;
+  color: #fff;
+  transition: all .5s;
+}
+.button:active {
+  opacity: .3;
+}
+.video {
+  width: 400px;
+  height: 300px;
+}
+.rightBtn {
+  display: flex;
+}
+.button.disable {
+  background-color: #666;
+  cursor: default;
+}
