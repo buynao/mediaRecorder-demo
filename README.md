@@ -1,6 +1,6 @@
 # mediaRecorder-demo
 
-A simple MediaRecorder demo using webm-duration-fix;
+A simple MediaRecorder demo using [webm-duration-fix](https://github.com/buynao/webm-duration-fix);
 
 ## Example
 
