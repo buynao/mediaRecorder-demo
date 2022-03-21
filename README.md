@@ -9,7 +9,7 @@ A simple MediaRecorder demo using webm-duration-fix;
 ## Run
 
 ```shell
-git clone https://github.com/buynao/mediaRecorderDemo.git
+git clone https://github.com/buynao/mediaRecorder-demo.git
 
 cd mediaRecorder-demo
 
