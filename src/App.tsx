@@ -2,7 +2,7 @@ import { useState, useRef, useCallback, useEffect } from 'react'
 import fixWebmDuration from 'webm-duration-fix';
 import './App.css';
 
-const mimeType = 'video/webm\;codecs=vp9';
+const mimeType = 'video/webm\;';
 let dataChunks: Blob[] = [];
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   // Start - 开始录制
   const starRecorder = useCallback(() => {
     navigator.mediaDevices.getUserMedia({
-      audio: true,
+      audio: false,
       video: true,
     }).then((stream) => {
       // set the stream to left video
@@ -30,7 +30,7 @@ function App() {
   }, []);
   // MediaRecorder-recording
   const recording = useCallback((stream: MediaStream) => {
-    recorder.current = new MediaRecorder(stream);
+    recorder.current = new MediaRecorder(stream, { mimeType: mimeType });
 
     recorder.current.ondataavailable = (event) => {
       let data = event.data;
@@ -39,12 +39,15 @@ function App() {
     recorder.current.start(1000);
     recorder.current.onstop = async () => {
       try {
+        console.log('fixWebmDuration start');
+        console.log([...dataChunks]);
         /* ------ fix blob, support fix webm file larger than 2GB ------ */
         repairedBlobRef.current = await fixWebmDuration(new Blob([...dataChunks], { type: mimeType })); 
+        console.log('fixWebmDuration success')
         dataChunks = [];
         saveHasVideState(true);
       } catch (error) {
-        
+        console.log("fixWebmDuration error: ", error);
       }
     };
     // update btn status
