@@ -1,15 +1,15 @@
 # mediaRecorder-demo
 
-A simple MediaRecorder demo using webm-duration-fix;
+A simple MediaRecorder demo using [webm-duration-fix](https://github.com/buynao/webm-duration-fix);
 
 ## Example
 
-[https://mediaRecorder-demo.vercel.app/](https://mediaRecorder-demo.vercel.app/)
+[https://media-recorder-demo.vercel.app/](https://media-recorder-demo.vercel.app/)
 
 ## Run
 
 ```shell
-git clone https://github.com/buynao/mediaRecorderDemo.git
+git clone https://github.com/buynao/mediaRecorder-demo.git
 
 cd mediaRecorder-demo
 
